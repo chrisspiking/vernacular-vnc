@@ -1,4 +1,4 @@
-package com.shinyhut.vernacular.viewer;
+package com.shinyhut.vernacular;
 
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.StringSelection;
@@ -18,6 +18,10 @@ import org.apache.commons.cli.ParseException;
 import com.shinyhut.vernacular.client.VernacularClient;
 import com.shinyhut.vernacular.client.VernacularConfig;
 import static com.shinyhut.vernacular.client.rendering.ColorDepth.BPP_16_TRUE;
+import com.shinyhut.vernacular.viewer.ConnectionManager;
+import com.shinyhut.vernacular.viewer.ConnectionStateListener;
+import com.shinyhut.vernacular.viewer.Tuple;
+import com.shinyhut.vernacular.viewer.ViewerFrame;
 import static java.awt.Toolkit.getDefaultToolkit;
 import static java.awt.datatransfer.DataFlavor.stringFlavor;
 import static java.lang.Thread.sleep;

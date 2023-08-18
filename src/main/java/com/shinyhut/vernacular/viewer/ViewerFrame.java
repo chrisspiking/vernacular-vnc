@@ -16,6 +16,7 @@ import javax.swing.event.AncestorListener;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.shinyhut.vernacular.VernacularViewer;
 import com.shinyhut.vernacular.client.VernacularClient;
 import com.shinyhut.vernacular.client.VernacularConfig;
 import static com.shinyhut.vernacular.client.rendering.ColorDepth.BPP_16_TRUE;

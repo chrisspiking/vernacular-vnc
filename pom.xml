@@ -127,7 +127,7 @@
                             <archive>
                                 <manifest>
                                     <mainClass>
-                                        com.shinyhut.com.shinyhut.vernacular.viewer.VernacularViewer
+                                        com.shinyhut.com.shinyhut.vernacular.VernacularViewer
                                     </mainClass>
                                 </manifest>
                             </archive>
@@ -145,7 +145,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.shinyhut.com.shinyhut.vernacular.viewer.VernacularViewer</mainClass>
+                            <mainClass>com.shinyhut.com.shinyhut.vernacular.VernacularViewer</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

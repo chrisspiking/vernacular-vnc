@@ -1,12 +1,11 @@
 package com.shinyhut.vernacular.protocol.auth;
 
-import com.shinyhut.vernacular.client.VncSession;
-import com.shinyhut.vernacular.protocol.messages.ProtocolVersion;
-import com.shinyhut.vernacular.protocol.messages.SecurityResult;
-
 import java.io.DataOutputStream;
 import java.io.IOException;
 
+import com.shinyhut.vernacular.client.VncSession;
+import com.shinyhut.vernacular.protocol.messages.ProtocolVersion;
+import com.shinyhut.vernacular.protocol.messages.SecurityResult;
 import static com.shinyhut.vernacular.protocol.messages.SecurityType.NONE;
 
 public class NoSecurityHandler implements SecurityHandler {

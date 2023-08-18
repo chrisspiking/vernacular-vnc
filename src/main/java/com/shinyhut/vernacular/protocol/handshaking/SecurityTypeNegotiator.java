@@ -1,5 +1,8 @@
 package com.shinyhut.vernacular.protocol.handshaking;
 
+import java.io.IOException;
+import java.util.List;
+
 import com.shinyhut.vernacular.client.VncSession;
 import com.shinyhut.vernacular.client.exceptions.NoSupportedSecurityTypesException;
 import com.shinyhut.vernacular.client.exceptions.VncException;
@@ -8,13 +11,11 @@ import com.shinyhut.vernacular.protocol.auth.NoSecurityHandler;
 import com.shinyhut.vernacular.protocol.auth.SecurityHandler;
 import com.shinyhut.vernacular.protocol.auth.VncAuthenticationHandler;
 import com.shinyhut.vernacular.protocol.messages.SecurityType;
+import static com.shinyhut.vernacular.protocol.messages.SecurityType.MS_LOGON_2;
+import static com.shinyhut.vernacular.protocol.messages.SecurityType.NONE;
+import static com.shinyhut.vernacular.protocol.messages.SecurityType.VNC;
 import com.shinyhut.vernacular.protocol.messages.ServerSecurityType;
 import com.shinyhut.vernacular.protocol.messages.ServerSecurityTypes;
-
-import java.io.IOException;
-import java.util.List;
-
-import static com.shinyhut.vernacular.protocol.messages.SecurityType.*;
 import static java.util.Collections.singletonList;
 
 public class SecurityTypeNegotiator {

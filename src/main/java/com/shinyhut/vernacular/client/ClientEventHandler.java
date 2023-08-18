@@ -1,9 +1,5 @@
 package com.shinyhut.vernacular.client;
 
-import com.shinyhut.vernacular.client.exceptions.UnexpectedVncException;
-import com.shinyhut.vernacular.client.exceptions.VncException;
-import com.shinyhut.vernacular.protocol.messages.*;
-
 import java.io.IOException;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -11,6 +7,13 @@ import java.util.List;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.function.Consumer;
 
+import com.shinyhut.vernacular.client.exceptions.UnexpectedVncException;
+import com.shinyhut.vernacular.client.exceptions.VncException;
+import com.shinyhut.vernacular.protocol.messages.ClientCutText;
+import com.shinyhut.vernacular.protocol.messages.Encodable;
+import com.shinyhut.vernacular.protocol.messages.FramebufferUpdateRequest;
+import com.shinyhut.vernacular.protocol.messages.KeyEvent;
+import com.shinyhut.vernacular.protocol.messages.PointerEvent;
 import static java.time.LocalDateTime.now;
 import static java.time.temporal.ChronoUnit.MILLIS;
 import static java.util.Collections.synchronizedList;

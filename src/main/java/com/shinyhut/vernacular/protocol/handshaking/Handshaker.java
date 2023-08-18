@@ -1,12 +1,12 @@
 package com.shinyhut.vernacular.protocol.handshaking;
 
+import java.io.IOException;
+
 import com.shinyhut.vernacular.client.VncSession;
 import com.shinyhut.vernacular.client.exceptions.AuthenticationFailedException;
 import com.shinyhut.vernacular.client.exceptions.VncException;
 import com.shinyhut.vernacular.protocol.auth.SecurityHandler;
 import com.shinyhut.vernacular.protocol.messages.SecurityResult;
-
-import java.io.IOException;
 
 public class Handshaker {
 

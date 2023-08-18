@@ -1,13 +1,5 @@
 package com.shinyhut.vernacular.protocol.auth;
 
-import com.shinyhut.vernacular.client.VncSession;
-import com.shinyhut.vernacular.client.exceptions.AuthenticationRequiredException;
-import com.shinyhut.vernacular.client.exceptions.UnexpectedVncException;
-import com.shinyhut.vernacular.client.exceptions.VncException;
-import com.shinyhut.vernacular.protocol.messages.SecurityResult;
-
-import javax.crypto.Cipher;
-import javax.crypto.spec.SecretKeySpec;
 import java.io.DataInputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -15,7 +7,14 @@ import java.io.OutputStream;
 import java.nio.charset.Charset;
 import java.security.GeneralSecurityException;
 import java.util.function.Supplier;
+import javax.crypto.Cipher;
+import javax.crypto.spec.SecretKeySpec;
 
+import com.shinyhut.vernacular.client.VncSession;
+import com.shinyhut.vernacular.client.exceptions.AuthenticationRequiredException;
+import com.shinyhut.vernacular.client.exceptions.UnexpectedVncException;
+import com.shinyhut.vernacular.client.exceptions.VncException;
+import com.shinyhut.vernacular.protocol.messages.SecurityResult;
 import static com.shinyhut.vernacular.protocol.messages.SecurityType.VNC;
 import static com.shinyhut.vernacular.utils.ByteUtils.reverseBits;
 import static java.lang.System.arraycopy;

@@ -1,10 +1,10 @@
 package com.shinyhut.vernacular.protocol.messages;
 
-import com.shinyhut.vernacular.client.exceptions.UnsupportedEncodingException;
-
 import java.io.DataInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+
+import com.shinyhut.vernacular.client.exceptions.UnsupportedEncodingException;
 
 public class Rectangle {
 

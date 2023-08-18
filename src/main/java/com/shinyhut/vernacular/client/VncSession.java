@@ -1,14 +1,14 @@
 package com.shinyhut.vernacular.client;
 
-import com.shinyhut.vernacular.protocol.messages.PixelFormat;
-import com.shinyhut.vernacular.protocol.messages.ProtocolVersion;
-import com.shinyhut.vernacular.protocol.messages.ServerInit;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.ReentrantLock;
+
+import com.shinyhut.vernacular.protocol.messages.PixelFormat;
+import com.shinyhut.vernacular.protocol.messages.ProtocolVersion;
+import com.shinyhut.vernacular.protocol.messages.ServerInit;
 
 public class VncSession {
 

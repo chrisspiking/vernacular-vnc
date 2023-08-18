@@ -1,5 +1,9 @@
 package com.shinyhut.vernacular.client;
 
+import java.io.IOException;
+import java.io.PushbackInputStream;
+import java.util.function.Consumer;
+
 import com.shinyhut.vernacular.client.exceptions.UnexpectedVncException;
 import com.shinyhut.vernacular.client.exceptions.UnknownMessageTypeException;
 import com.shinyhut.vernacular.client.exceptions.VncException;
@@ -8,10 +12,6 @@ import com.shinyhut.vernacular.protocol.messages.Bell;
 import com.shinyhut.vernacular.protocol.messages.FramebufferUpdate;
 import com.shinyhut.vernacular.protocol.messages.ServerCutText;
 import com.shinyhut.vernacular.protocol.messages.SetColorMapEntries;
-
-import java.io.IOException;
-import java.io.PushbackInputStream;
-import java.util.function.Consumer;
 
 public class ServerEventHandler {
 

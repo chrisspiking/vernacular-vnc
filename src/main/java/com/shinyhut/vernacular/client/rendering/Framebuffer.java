@@ -1,12 +1,5 @@
 package com.shinyhut.vernacular.client.rendering;
 
-import com.shinyhut.vernacular.client.VncSession;
-import com.shinyhut.vernacular.client.exceptions.UnexpectedVncException;
-import com.shinyhut.vernacular.client.exceptions.VncException;
-import com.shinyhut.vernacular.client.rendering.renderers.*;
-import com.shinyhut.vernacular.protocol.messages.*;
-import com.shinyhut.vernacular.protocol.messages.Rectangle;
-
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.awt.image.ColorModel;
@@ -19,7 +12,29 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 
-import static com.shinyhut.vernacular.protocol.messages.Encoding.*;
+import com.shinyhut.vernacular.client.VncSession;
+import com.shinyhut.vernacular.client.exceptions.UnexpectedVncException;
+import com.shinyhut.vernacular.client.exceptions.VncException;
+import com.shinyhut.vernacular.client.rendering.renderers.CopyRectRenderer;
+import com.shinyhut.vernacular.client.rendering.renderers.CursorRenderer;
+import com.shinyhut.vernacular.client.rendering.renderers.HextileRenderer;
+import com.shinyhut.vernacular.client.rendering.renderers.PixelDecoder;
+import com.shinyhut.vernacular.client.rendering.renderers.RRERenderer;
+import com.shinyhut.vernacular.client.rendering.renderers.RawRenderer;
+import com.shinyhut.vernacular.client.rendering.renderers.Renderer;
+import com.shinyhut.vernacular.client.rendering.renderers.ZLibRenderer;
+import com.shinyhut.vernacular.protocol.messages.ColorMapEntry;
+import com.shinyhut.vernacular.protocol.messages.Encoding;
+import static com.shinyhut.vernacular.protocol.messages.Encoding.COPYRECT;
+import static com.shinyhut.vernacular.protocol.messages.Encoding.CURSOR;
+import static com.shinyhut.vernacular.protocol.messages.Encoding.DESKTOP_SIZE;
+import static com.shinyhut.vernacular.protocol.messages.Encoding.HEXTILE;
+import static com.shinyhut.vernacular.protocol.messages.Encoding.RAW;
+import static com.shinyhut.vernacular.protocol.messages.Encoding.RRE;
+import static com.shinyhut.vernacular.protocol.messages.Encoding.ZLIB;
+import com.shinyhut.vernacular.protocol.messages.FramebufferUpdate;
+import com.shinyhut.vernacular.protocol.messages.Rectangle;
+import com.shinyhut.vernacular.protocol.messages.SetColorMapEntries;
 import static java.awt.image.BufferedImage.TYPE_INT_ARGB;
 import static java.awt.image.BufferedImage.TYPE_INT_RGB;
 

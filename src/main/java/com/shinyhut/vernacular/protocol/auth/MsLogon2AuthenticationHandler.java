@@ -1,22 +1,29 @@
 package com.shinyhut.vernacular.protocol.auth;
 
+import java.io.DataInput;
+import java.io.DataInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.math.BigInteger;
+import java.security.GeneralSecurityException;
+import java.security.NoSuchAlgorithmException;
+import java.security.SecureRandom;
+import java.util.Random;
+import java.util.function.Supplier;
+import javax.crypto.Cipher;
+import javax.crypto.spec.IvParameterSpec;
+import javax.crypto.spec.SecretKeySpec;
+
 import com.shinyhut.vernacular.client.VncSession;
 import com.shinyhut.vernacular.client.exceptions.AuthenticationRequiredException;
 import com.shinyhut.vernacular.client.exceptions.UnexpectedVncException;
 import com.shinyhut.vernacular.client.exceptions.VncException;
 import com.shinyhut.vernacular.protocol.messages.SecurityResult;
-
-import javax.crypto.Cipher;
-import javax.crypto.spec.IvParameterSpec;
-import javax.crypto.spec.SecretKeySpec;
-import java.io.*;
-import java.math.BigInteger;
-import java.security.*;
-import java.util.Random;
-import java.util.function.Supplier;
-
 import static com.shinyhut.vernacular.protocol.messages.SecurityType.MS_LOGON_2;
-import static com.shinyhut.vernacular.utils.ByteUtils.*;
+import static com.shinyhut.vernacular.utils.ByteUtils.padLeft;
+import static com.shinyhut.vernacular.utils.ByteUtils.padRight;
+import static com.shinyhut.vernacular.utils.ByteUtils.reverseBits;
 import static java.nio.charset.StandardCharsets.ISO_8859_1;
 import static javax.crypto.Cipher.ENCRYPT_MODE;
 

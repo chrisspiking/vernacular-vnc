@@ -1,13 +1,18 @@
 package com.shinyhut.vernacular.client.rendering.renderers;
 
+import java.awt.image.BufferedImage;
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.DataInput;
+import java.io.DataInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.zip.DataFormatException;
+import java.util.zip.Inflater;
+
 import com.shinyhut.vernacular.client.exceptions.UnexpectedVncException;
 import com.shinyhut.vernacular.client.exceptions.VncException;
 import com.shinyhut.vernacular.protocol.messages.Rectangle;
-
-import java.awt.image.BufferedImage;
-import java.io.*;
-import java.util.zip.DataFormatException;
-import java.util.zip.Inflater;
 
 public class ZLibRenderer implements Renderer {
 

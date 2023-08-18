@@ -1,8 +1,5 @@
 package com.shinyhut.vernacular.client.rendering.renderers;
 
-import com.shinyhut.vernacular.protocol.messages.ColorMapEntry;
-import com.shinyhut.vernacular.protocol.messages.PixelFormat;
-
 import java.io.DataInput;
 import java.io.DataInputStream;
 import java.io.IOException;
@@ -10,6 +7,9 @@ import java.io.InputStream;
 import java.math.BigInteger;
 import java.util.Map;
 import java.util.Optional;
+
+import com.shinyhut.vernacular.protocol.messages.ColorMapEntry;
+import com.shinyhut.vernacular.protocol.messages.PixelFormat;
 
 public class PixelDecoder {
 

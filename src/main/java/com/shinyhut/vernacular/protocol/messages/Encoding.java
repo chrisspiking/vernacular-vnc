@@ -1,7 +1,6 @@
 package com.shinyhut.vernacular.protocol.messages;
 
 import com.shinyhut.vernacular.client.exceptions.UnsupportedEncodingException;
-
 import static java.util.Arrays.stream;
 
 public enum Encoding {

@@ -1,12 +1,11 @@
 package com.shinyhut.vernacular.protocol.handshaking;
 
+import java.io.IOException;
+
 import com.shinyhut.vernacular.client.VncSession;
 import com.shinyhut.vernacular.client.exceptions.UnsupportedProtocolVersionException;
 import com.shinyhut.vernacular.client.exceptions.VncException;
 import com.shinyhut.vernacular.protocol.messages.ProtocolVersion;
-
-import java.io.IOException;
-
 import static java.lang.Math.min;
 
 public class ProtocolVersionNegotiator {

@@ -1,10 +1,5 @@
 package com.shinyhut.vernacular.client.rendering.renderers;
 
-import com.shinyhut.vernacular.client.exceptions.UnexpectedVncException;
-import com.shinyhut.vernacular.client.exceptions.VncException;
-import com.shinyhut.vernacular.protocol.messages.PixelFormat;
-import com.shinyhut.vernacular.protocol.messages.Rectangle;
-
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.DataInput;
@@ -12,6 +7,10 @@ import java.io.DataInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
+import com.shinyhut.vernacular.client.exceptions.UnexpectedVncException;
+import com.shinyhut.vernacular.client.exceptions.VncException;
+import com.shinyhut.vernacular.protocol.messages.PixelFormat;
+import com.shinyhut.vernacular.protocol.messages.Rectangle;
 import static com.shinyhut.vernacular.utils.ByteUtils.mask;
 
 public class HextileRenderer implements Renderer {
